@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "rmagick-metadata"
-  gem.version       = "0.0.2"
+  gem.version       = "0.0.3"
   gem.authors       = ["Eric Berry"]
   gem.email         = ["cavneb@gmail.com"]
   gem.description   = %q{Parses an image using RMagick and parses the metadata}

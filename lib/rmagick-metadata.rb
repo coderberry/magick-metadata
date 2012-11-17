@@ -1,5 +1,3 @@
-require "RMagick"
-
 class RMagickMetadata
 
   def initialize( file_path )
