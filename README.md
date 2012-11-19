@@ -1,12 +1,14 @@
-# Rmagick::Metadata
+# Magick::Metadata
 
-Parses an image using RMagick and parses the metadata.
+Parses an image using ImageMagick and parses the metadata.
+
+For this gem to work, [ImageMagick](http://www.imagemagick.org/script/index.php) must be installed.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'rmagick-metadata'
+    gem 'magick-metadata'
 
 And then execute:
 
@@ -14,14 +16,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rmagick-metadata
+    $ gem install magick-metadata
 
 ## Usage
 
 ```ruby
 image_path = "/my_rails_app/app/assets/images/rails.png"
 
-data = RMagickMetadata.new(image_path)
+data = MagickMetadata.new(image_path)
 
 # Helpers
 assert data.filename_suffix                            == 'png'
@@ -36,12 +38,12 @@ assert data.compression_percent                        == 0.0
 # Auto-populated
 assert data.file_size_of_image                         == '6646B'
 assert data.comment                                    == ''
-assert data.directory                                  =~ /\.*\/rmagick-metadata\/test/
+assert data.directory                                  =~ /\.*\/magick-metadata\/test/
 assert data.filename_suffix                            == 'png'
 assert data.filename_with_suffix                       == 'rails.png'
 assert data.layer_canvas_page_geometry                 == '50x64+0+0'
 assert data.current_height_in_pixels                   == '64'
-assert data.image_filename                             =~ /\.*\/rmagick-metadata\/test\/rails.png/
+assert data.image_filename                             =~ /\.*\/magick-metadata\/test\/rails.png/
 assert data.calculated_number_of_unique_colors         == '2018'
 assert data.label                                      == ''
 assert data.image_file_format                          == 'PNG'
@@ -62,7 +64,7 @@ assert data.image_compression_type                     == 'Zip'
 assert data.image_gif_dispose_method                   == 'Undefined'
 assert data.image_size_w_x_h                           == '50x64'
 assert data.page_canvas_height                         == '64'
-assert data.magick_filename                            =~ /\.*\/rmagick-metadata\/test\/rails.png/
+assert data.magick_filename                            =~ /\.*\/magick-metadata\/test\/rails.png/
 assert data.page_canvas_offset                         == '+0+0'
 assert data.page_canvas_size                           == '50x64'
 assert data.image_compression_quality                  == '0'

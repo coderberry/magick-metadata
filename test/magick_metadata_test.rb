@@ -1,12 +1,12 @@
 require File.expand_path("../test_helper", __FILE__)
 
-class RMagickMetadataTest < MicroTest::Test
+class MagickMetadataTest < MicroTest::Test
 
   test "initialize and populate data" do
     image_path = File.expand_path("../rails.png", __FILE__)
     assert File.exist? image_path
 
-    data = ::RMagickMetadata.new(image_path)
+    data = ::MagickMetadata.new(image_path)
 
     # Helpers
     assert data.filename_suffix                            == 'png'
@@ -21,12 +21,12 @@ class RMagickMetadataTest < MicroTest::Test
     # Auto-populated
     assert data.file_size_of_image                         == '6646B'
     assert data.comment                                    == ''
-    assert data.directory                                  =~ /\.*\/rmagick-metadata\/test/
+    assert data.directory                                  =~ /\.*\/magick-metadata\/test/
     assert data.filename_suffix                            == 'png'
     assert data.filename_with_suffix                       == 'rails.png'
     assert data.layer_canvas_page_geometry                 == '50x64+0+0'
     assert data.current_height_in_pixels                   == '64'
-    assert data.image_filename                             =~ /\.*\/rmagick-metadata\/test\/rails.png/
+    assert data.image_filename                             =~ /\.*\/magick-metadata\/test\/rails.png/
     assert data.calculated_number_of_unique_colors         == '2018'
     assert data.label                                      == ''
     assert data.image_file_format                          == 'PNG'
@@ -47,7 +47,7 @@ class RMagickMetadataTest < MicroTest::Test
     assert data.image_gif_dispose_method                   == 'Undefined'
     assert data.image_size_w_x_h                           == '50x64'
     assert data.page_canvas_height                         == '64'
-    assert data.magick_filename                            =~ /\.*\/rmagick-metadata\/test\/rails.png/
+    assert data.magick_filename                            =~ /\.*\/magick-metadata\/test\/rails.png/
     assert data.page_canvas_offset                         == '+0+0'
     assert data.page_canvas_size                           == '50x64'
     assert data.image_compression_quality                  == '0'

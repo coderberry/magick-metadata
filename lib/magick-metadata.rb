@@ -1,4 +1,4 @@
-class RMagickMetadata
+class MagickMetadata
 
   def initialize( file_path )
       
