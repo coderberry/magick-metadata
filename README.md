@@ -1,3 +1,5 @@
+### NOTE: This gem has been renamed from rmagick-metadata to magick-metadata
+
 # Magick::Metadata
 
 Parses an image using ImageMagick and parses the metadata.
@@ -76,6 +78,30 @@ assert data.page_canvas_y_offset                       == '0'
 assert data.unique_filename                            == ''
 assert data.calculated_trim_bounding_box               == '50x64+0+0'
 assert data.calculated_signature_hash_of_image_values  == 'ae231a37d573c2ef941f3345932183b58cf5c0e6a569839d931b6172cebdbe27'
+```
+
+## Usage with CarrierWave
+
+If you would like to use this gem along with [CarrierWave](https://github.com/jnicklas/carrierwave), place the following into your uploader file:
+
+```ruby
+process :store_metadata
+def store_metadata
+  if @file
+    metadata = ::MagickMetadata.new(@file.path)
+    model.content_type        = metadata.image_file_format
+    model.file_size           = metadata.file_size
+    model.width               = metadata.width
+    model.height              = metadata.height
+    model.filename_suffix     = metadata.filename_suffix
+    model.is_transparency     = metadata.has_transparency?
+    model.resolution          = metadata.resolution
+    model.compression_percent = metadata.image_compression_quality
+    model.file_name           = metadata.filename_with_suffix
+    model.unique_color_count  = metadata.calculated_number_of_unique_colors
+    model.file_format         = metadata.image_file_format
+  end
+end
 ```
 
 ## Testing
