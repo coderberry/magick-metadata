@@ -2,6 +2,8 @@
 
 # Magick::Metadata
 
+<a href="https://app.codesponsor.io/link/Z24Ypyn8iC1Q4i6uCwNyLW3r/cavneb/magick-metadata" rel="nofollow"><img src="https://app.codesponsor.io/embed/Z24Ypyn8iC1Q4i6uCwNyLW3r/cavneb/magick-metadata.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
+
 Parses an image using ImageMagick and parses the metadata.
 
 For this gem to work, [ImageMagick](http://www.imagemagick.org/script/index.php) must be installed.
