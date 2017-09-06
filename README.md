@@ -2,7 +2,7 @@
 
 # Magick::Metadata
 
-<a href="https://app.codesponsor.io/link/Z24Ypyn8iC1Q4i6uCwNyLW3r/cavneb/magick-metadata" rel="nofollow"><img src="https://app.codesponsor.io/embed/Z24Ypyn8iC1Q4i6uCwNyLW3r/cavneb/magick-metadata.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
+<a target='_blank' rel='nofollow' href='https://staging.codesponsor.io/link/Z24Ypyn8iC1Q4i6uCwNyLW3r/cavneb/make_flaggable'>  <img alt='Sponsor' width='888' height='68' src='https://staging.codesponsor.io/embed/Z24Ypyn8iC1Q4i6uCwNyLW3r/cavneb/make_flaggable.svg' /></a>
 
 Parses an image using ImageMagick and parses the metadata.
 
